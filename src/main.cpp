@@ -93,8 +93,8 @@ void loop() {
     value = scale.read_average(5);
     Serial.println(value);
 
-    // Only publish new value if difference of 1000 or more
-    if (abs(lastValue - value) >= 1000) {
+    // Only publish new value if difference of 500 or more
+    if (abs(lastValue - value) >= 500) {
         String value_str = String(value);
         client.publish(STATE_TOPIC, (char *)value_str.c_str());
         lastValue = value;
