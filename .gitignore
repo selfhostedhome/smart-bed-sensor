@@ -34,3 +34,6 @@
 # Platformio
 .pioenvs
 .piolibdeps
+
+# User specific config file
+src/config.h
