@@ -9,7 +9,9 @@
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
-HX711 scale(HX711_DT, HX711_SCK);
+HX711 scale;
+const int HX711_DT;
+const int HX711_SCK;
 
 void reconnect() {
     // Loop until we're reconnected
